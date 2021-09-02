@@ -24,3 +24,7 @@ jobs:
       dist: xenial
       arch: amd64
       script: true
+
+    - os: osx
+      xcode: 12.5
+      script: true
