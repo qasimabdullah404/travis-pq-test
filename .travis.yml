@@ -1,30 +1,39 @@
+language: python
+cache:
+  - $HOME/.m2
 jobs:
   include:
     - os: linux
       dist: xenial
       arch: ppc64le
+      before_install:
+        - sudo apt-get -yq install maven
       script: true
       
     - os: linux
       dist: xenial
       arch: s390x
+      before_install:
+        - sudo apt-get -yq install maven
       script: true
       
     - os: linux
       dist: xenial
       arch: arm64-graviton2
+      before_install:
+        - sudo apt-get -yq install maven
       script: true
       
     - os: linux
       dist: xenial
       arch: arm64
+      before_install:
+        - sudo apt-get -yq install maven
       script: true
       
     - os: linux
       dist: xenial
       arch: amd64
-      script: true
-
-    - os: osx
-      xcode: 12.5
+      before_install:
+        - sudo apt-get -yq install maven
       script: true
