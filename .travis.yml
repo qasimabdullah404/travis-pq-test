@@ -7,34 +7,33 @@ jobs:
       dist: focal
       arch: ppc64le
       before_install:
-        - echo $(hostname -I | cut -d\  -f1) $(hostname) | sudo tee -a /etc/hosts
-        - sudo apt-get -yq install maven
+        - cat /etc/hosts
       script: true
       
     - os: linux
       dist: focal
       arch: s390x
       before_install:
-        - sudo apt-get -yq install maven
+        - cat /etc/hosts
       script: true
       
     - os: linux
       dist: focal
       arch: arm64-graviton2
       before_install:
-        - sudo apt-get -yq install maven
+        - cat /etc/hosts
       script: true
       
     - os: linux
       dist: focal
       arch: arm64
       before_install:
-        - sudo apt-get -yq install maven
+        - cat /etc/hosts
       script: true
       
     - os: linux
       dist: focal
       arch: amd64
       before_install:
-        - sudo apt-get -yq install maven
+        - cat /etc/hosts
       script: true
