@@ -7,6 +7,7 @@ jobs:
       dist: focal
       arch: ppc64le
       before_install:
+        - echo $(hostname -I | cut -d\  -f1) $(hostname) | sudo tee -a /etc/hosts
         - sudo apt-get -yq install maven
       script: true
       
