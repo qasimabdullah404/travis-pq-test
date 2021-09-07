@@ -1,6 +1,4 @@
 language: python
-cache:
-  - $HOME/.m2
 jobs:
   include:
     - os: linux
