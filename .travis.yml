@@ -1,37 +1,21 @@
+os: linux
+dist: xenial
 language: python
+before_install:
+  - sudo systemctl stop epmd.socket epmd.service
 jobs:
   include:
-    - os: linux
-      dist: focal
-      arch: ppc64le
-      before_install:
-        - cat /etc/hosts
+    - arch: ppc64le
       script: true
       
-    - os: linux
-      dist: focal
-      arch: s390x
-      before_install:
-        - cat /etc/hosts
+    - arch: s390x
       script: true
       
-    - os: linux
-      dist: focal
-      arch: arm64-graviton2
-      before_install:
-        - cat /etc/hosts
+    - arch: arm64-graviton2
       script: true
       
-    - os: linux
-      dist: focal
-      arch: arm64
-      before_install:
-        - cat /etc/hosts
+    - arch: arm64
       script: true
       
-    - os: linux
-      dist: focal
-      arch: amd64
-      before_install:
-        - cat /etc/hosts
+    - arch: amd64
       script: true
