@@ -1,6 +1,7 @@
 os: linux
 dist: xenial
-language: python
+language: java
+jdk: openjdk11
 before_install:
   - sudo systemctl stop epmd.socket epmd.service
 jobs:
