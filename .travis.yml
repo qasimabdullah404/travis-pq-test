@@ -2,21 +2,29 @@ os: linux
 dist: xenial
 language: java
 jdk: openjdk11
-before_install:
-  - sudo systemctl stop epmd.socket epmd.service
 jobs:
   include:
     - arch: ppc64le
+      before_install:
+        sudo systemctl stop epmd.socket epmd.service
       script: true
       
     - arch: s390x
+      before_install:
+        sudo systemctl stop epmd.socket epmd.service
       script: true
       
     - arch: arm64-graviton2
+      before_install:
+        sudo systemctl stop epmd.socket epmd.service
       script: true
       
     - arch: arm64
+      before_install:
+        sudo systemctl stop epmd.socket epmd.service
       script: true
       
     - arch: amd64
+      before_install:
+        sudo systemctl stop epmd.socket epmd.service
       script: true
