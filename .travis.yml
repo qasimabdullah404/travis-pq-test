@@ -5,29 +5,23 @@ jdk: openjdk11
 cache:
   directories:
     - ~/.m2
+addons:
+  apt:
+    packages:
+      - maven
 jobs:
   include:
     - arch: ppc64le
-      before_install:
-          - sudo apt-get -yq install maven
       script: true
       
     - arch: s390x
-      before_install:
-        - sudo apt-get -yq install maven
       script: true
       
     - arch: arm64-graviton2
-      before_install:
-        - sudo apt-get -yq install maven
       script: true
 
     - arch: arm64
-      before_install:
-        - sudo apt-get -yq install maven
       script: true
       
     - arch: amd64
-      before_install:
-        - sudo apt-get -yq install maven
       script: true
