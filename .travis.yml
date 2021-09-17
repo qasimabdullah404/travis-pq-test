@@ -19,25 +19,11 @@ jobs:
       script: true
       
     - arch: arm64-graviton2
-      virt: vm
-      before_install:
-        - sudo apt-get -yq install maven
-      script: true
-
-    - arch: arm64-graviton2
-      virt: lxd
-      before_install:
-        - sudo apt-get -yq install maven
-      script: true
-      
-    - arch: arm64
-      virt: vm
       before_install:
         - sudo apt-get -yq install maven
       script: true
 
     - arch: arm64
-      virt: lxd
       before_install:
         - sudo apt-get -yq install maven
       script: true
