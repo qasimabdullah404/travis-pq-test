@@ -2,43 +2,47 @@ os: linux
 dist: xenial
 language: java
 jdk: openjdk11
+cache:
+  directories:
+    - ~/.m2
 jobs:
   include:
     - arch: ppc64le
       before_install:
-        sudo systemctl stop epmd.socket epmd.service
+        before_install:
+          - sudo apt-get -yq install maven
       script: true
       
     - arch: s390x
       before_install:
-        sudo systemctl stop epmd.socket epmd.service
+        - sudo apt-get -yq install maven
       script: true
       
     - arch: arm64-graviton2
       virt: vm
       before_install:
-        sudo systemctl stop epmd.socket epmd.service
+        - sudo apt-get -yq install maven
       script: true
 
     - arch: arm64-graviton2
       virt: lxd
       before_install:
-        sudo systemctl stop epmd.socket epmd.service
+        - sudo apt-get -yq install maven
       script: true
       
     - arch: arm64
       virt: vm
       before_install:
-        sudo systemctl stop epmd.socket epmd.service
+        - sudo apt-get -yq install maven
       script: true
 
     - arch: arm64
       virt: lxd
       before_install:
-        sudo systemctl stop epmd.socket epmd.service
+        - sudo apt-get -yq install maven
       script: true
       
     - arch: amd64
       before_install:
-        sudo systemctl stop epmd.socket epmd.service
+        - sudo apt-get -yq install maven
       script: true
