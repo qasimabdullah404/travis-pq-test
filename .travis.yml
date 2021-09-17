@@ -9,7 +9,6 @@ jobs:
   include:
     - arch: ppc64le
       before_install:
-        before_install:
           - sudo apt-get -yq install maven
       script: true
       
