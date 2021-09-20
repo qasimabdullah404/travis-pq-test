@@ -24,4 +24,8 @@ jobs:
       script: true
       
     - arch: amd64
+      dist: focal
+      language: php
+      php:
+        - 7.4
       script: true
