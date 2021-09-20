@@ -27,5 +27,5 @@ jobs:
       dist: focal
       language: php
       php:
-        - 7.4.2
+        - 7.4.22
       script: true
