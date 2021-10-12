@@ -1,6 +1,6 @@
 os: linux
 dist: xenial
-language: shell
+language: ruby
 jobs:
   include:
     - arch: ppc64le
