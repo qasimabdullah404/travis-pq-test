@@ -1,31 +1,34 @@
 os: linux
 dist: xenial
-language: java
-jdk: openjdk11
-cache:
-  directories:
-    - ~/.m2
-addons:
-  apt:
-    packages:
-      - maven
+language: shell
 jobs:
   include:
     - arch: ppc64le
+      os: focal
+      language: shell
+      virt: lxd
       script: true
       
     - arch: s390x
+      os: focal
+      language: shell
+      virt: lxd
       script: true
       
     - arch: arm64-graviton2
+      os: focal
+      language: shell
+      virt: lxd
       script: true
 
     - arch: arm64
+      os: focal
+      language: shell
+      virt: lxd
       script: true
-      
+    
     - arch: amd64
-      dist: focal
-      language: php
-      php:
-        - 7.4.22
+      os: focal
+      language: shell
+      virt: lxd
       script: true
