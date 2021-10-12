@@ -4,31 +4,36 @@ language: shell
 jobs:
   include:
     - arch: ppc64le
-      os: focal
+      os: linux
+      dist: focal
       language: shell
       virt: lxd
       script: true
       
     - arch: s390x
-      os: focal
+      os: linux
+      dist: focal
       language: shell
       virt: lxd
       script: true
       
     - arch: arm64-graviton2
-      os: focal
+      os: linux
+      dist: focal
       language: shell
       virt: lxd
       script: true
 
     - arch: arm64
-      os: focal
+      os: linux
+      dist: focal
       language: shell
       virt: lxd
       script: true
     
     - arch: amd64
-      os: focal
+      os: linux
+      dist: focal
       language: shell
       virt: lxd
       script: true
