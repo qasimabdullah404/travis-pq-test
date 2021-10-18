@@ -5,33 +5,17 @@ jobs:
   include:
     - arch: ppc64le
       os: linux
-      dist: focal
+      dist: bionic
       language: shell
-      virt: lxd
-      script: true
-      
-    - arch: s390x
-      os: linux
-      dist: focal
-      language: shell
-      virt: lxd
-      script: true
+      before_install:
+        - git version
+        - sudo add-apt-repository -y ppa:git-core/ppa
+        - sudo apt-get update
+        - sudo apt-get -y install git
+      script:
+        - git version
       
     - arch: arm64-graviton2
-      os: linux
-      dist: focal
-      language: shell
-      virt: lxd
-      script: true
-
-    - arch: arm64
-      os: linux
-      dist: focal
-      language: shell
-      virt: lxd
-      script: true
-    
-    - arch: amd64
       os: linux
       dist: focal
       language: shell
